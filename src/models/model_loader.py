@@ -15,12 +15,11 @@ class ModelLoader:
     """
 
     def __init__(
-        self, feature_extractor_config, classifier_config, img_config, general_config
+        self, feature_extractor_config, classifier_config, img_config
     ):
         self.feature_extractor_config = feature_extractor_config
         self.classifier_config = classifier_config
         self.img_config = img_config
-        self.general_config = general_config
 
         self.feature_extractor = self.load_feature_extractor()
         self.classifier = self.load_classifier()
