@@ -14,9 +14,7 @@ class ModelLoader:
         general_config (dict) - The general config.
     """
 
-    def __init__(
-        self, feature_extractor_config, classifier_config, img_config
-    ):
+    def __init__(self, feature_extractor_config, classifier_config, img_config):
         self.feature_extractor_config = feature_extractor_config
         self.classifier_config = classifier_config
         self.img_config = img_config
@@ -70,3 +68,15 @@ class ModelLoader:
                 input_dim, hidden_sizes, output_dim, activation_function_name
             )
             return classifier
+
+    def load_model(self):
+        """
+        The function loads model and returns it.
+
+        Returns:
+            model (nn.Sequential) - The model (feature extractor + classifier).
+        """
+
+        model = torch.nn.Sequential(self.feature_extractor, self.classifier)
+
+        return model
