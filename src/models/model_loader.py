@@ -33,8 +33,14 @@ class ModelLoader:
         if self.feature_extractor_config["type"] == "pretrained":
             model_name = self.feature_extractor_config["model_name"]
             pretrained = self.feature_extractor_config["pretrained"]
+            freeze = self.feature_extractor_config["freeze"]
 
             feature_extractor = PretrainedFeatureExtractor(model_name, pretrained)
+
+            if freeze is True:
+                for param in feature_extractor.parameters():
+                    param.requires_grad = False
+
             return feature_extractor
 
     def load_classifier(self):

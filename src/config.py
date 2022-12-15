@@ -12,6 +12,7 @@ FEATURE_EXTRACTOR_CONFIG = {
     "type": "pretrained",
     "model_name": "mobilenetv2_100",
     "pretrained": True,
+    "freeze": False
 }
 
 CLASSIFIER_CONFIG = {
