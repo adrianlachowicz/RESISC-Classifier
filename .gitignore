@@ -133,3 +133,6 @@ data/
 
 # PyCharm files
 .idea/
+
+# Neptune files
+.neptune/
