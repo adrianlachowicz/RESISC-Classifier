@@ -1,8 +1,10 @@
 import torch.cuda
 
 NUM_WORKERS = 1
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 TRAIN_SIZE = 0.8
+EPOCHS = 10
+API_TOKEN = "your_api_key"
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
