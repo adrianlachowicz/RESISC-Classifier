@@ -11,7 +11,7 @@ def get_train_val_sizes(train_size: float, full_dataset):
         val_size (int) - Num of the images in train dataset.
     """
     assert (train_size > 0) and (
-            train_size < 1
+        train_size < 1
     ), "Invalid dataset sizes! The size value should be between 0 and 1!"
 
     full_dataset_size = len(full_dataset)
@@ -22,7 +22,7 @@ def get_train_val_sizes(train_size: float, full_dataset):
     val_size = int(val_size * full_dataset_size)
 
     assert (
-            train_size + val_size == full_dataset_size
+        train_size + val_size == full_dataset_size
     ), "Invalid calculations of dataset sizes!"
 
     return train_size, val_size
