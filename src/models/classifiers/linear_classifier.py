@@ -26,6 +26,9 @@ class LinearClassifier(nn.Module):
             input_dim, hidden_dims, output_dim, activation_function_name
         )
 
+    def forward(self, x):
+        return self.classifier(x)
+
     def build_classifier(
         self,
         input_dim: int,
