@@ -124,6 +124,10 @@ if __name__ == "__main__":
     train_loader, val_loader = define_dataloaders()
     model = load_model()
 
+    if MODEL_CHECKPOINT_PATH is not None:
+        print("Loading model from {} file".format(MODEL_CHECKPOINT_PATH))
+        print(model.load_state_dict(torch.load(MODEL_CHECKPOINT_PATH)))
+
     run = neptune.init_run(
         project="adrianlachowicz/RESISC-Classifier",
         api_token=API_TOKEN,
