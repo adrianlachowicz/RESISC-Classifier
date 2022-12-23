@@ -13,6 +13,7 @@ from src.utils import get_train_val_sizes
 from tqdm import tqdm
 from torchsummary import summary
 
+
 def split_datasets(transform):
     """
     The function splits dataset into train and validation sets.
