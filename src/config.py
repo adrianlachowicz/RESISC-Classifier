@@ -7,6 +7,7 @@ EPOCHS = 10
 
 API_TOKEN = "your_api_key"
 TRAINING_NAME = "test"
+MODEL_CHECKPOINT_PATH = "../models/efficientnet-fine-tuning/model-5.pth"
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
