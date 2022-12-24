@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data directory
+data/
+
+# PyCharm files
+.idea/
+
+# Neptune files
+.neptune/
+
+# Models
+models/
